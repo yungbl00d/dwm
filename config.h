@@ -35,6 +35,7 @@ static const Rule rules[] = {
 	{ "Gimp",     NULL,       NULL,       0,            1,           -1 },
 	{ "firefox",  NULL,       NULL,       1 << 1,       0,           -1 },
 	{ "Spotify",  NULL,       NULL,       1 << 2,       0,           -1 },
+	{ "spotify",  NULL,       NULL,       1 << 2,       0,           -1 },
 };
 
 /* window swallowing */
