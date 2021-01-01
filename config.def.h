@@ -128,7 +128,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} },
 	{ MODKEY,                       XK_y,      setlayout,      {.v = &layouts[1]} },
 	{ MODKEY|ShiftMask,             XK_s,      setlayout,      {.v = &layouts[2]} },
-	{ MODKEY|ShiftMask,             XK_f,      fullscreen,     {0} },
+	{ MODKEY,                       XK_f,      fullscreen,     {0} },
 	{ MODKEY,                       XK_m,      viewtoright,    {0} },
 	{ MODKEY|ShiftMask,             XK_m,      tagtoright,     {0} },
 	{ MODKEY,                       XK_n,      viewtoleft,     {0} },
