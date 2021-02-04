@@ -76,8 +76,8 @@ static const Layout layouts[] = {
 #define MODKEY Mod4Mask
 #define MOD2KEY Mod1Mask
 #define TAGKEYS(KEY,TAG) \
-	{ MODKEY,                       KEY,      view,           {.ui = 1 << TAG} }, \
-	{ MODKEY|ControlMask,           KEY,      toggleview,     {.ui = 1 << TAG} }, \
+	{ MODKEY,                       KEY,      toggleview,     {.ui = 1 << TAG} }, \
+	{ MODKEY|ControlMask,           KEY,      view,           {.ui = 1 << TAG} }, \
 	{ MODKEY|ShiftMask,             KEY,      tag,            {.ui = 1 << TAG} }, \
 	{ MODKEY|ControlMask|ShiftMask, KEY,      toggletag,      {.ui = 1 << TAG} },
 
@@ -132,10 +132,10 @@ static Key keys[] = {
 	{ MODKEY,                       XK_y,      setlayout,      {.v = &layouts[1]} },
 	{ MODKEY|ShiftMask,             XK_s,      setlayout,      {.v = &layouts[2]} },
 	{ MODKEY,                       XK_f,      fullscreen,     {0} },
-	{ MODKEY,                       XK_l,      viewtoright,    {0} },
-	{ MODKEY|ShiftMask,             XK_l,      tagtoright,     {0} },
-	{ MODKEY,                       XK_h,      viewtoleft,     {0} },
-	{ MODKEY|ShiftMask,             XK_h,      tagtoleft,      {0} },
+	{ MODKEY|ShiftMask,             XK_l,      viewtoright,    {0} },
+	{ MODKEY,                       XK_l,      tagtoright,     {0} },
+	{ MODKEY|ShiftMask,             XK_h,      viewtoleft,     {0} },
+	{ MODKEY,                       XK_h,      tagtoleft,      {0} },
 	{ MODKEY,                       XK_space,  setlayout,      {0} },
 	{ MODKEY|ShiftMask,             XK_space,  togglefloating, {0} },
 	{ MODKEY,                       XK_0,      view,           {.ui = ~0 } },
