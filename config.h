@@ -89,7 +89,6 @@ static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() 
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
 static const char *termcmd[]  = { "st", NULL };
 /* static const char *rangercmd[]  = { "st", "-e", "ranger", NULL }; */
-static const char *todocmd[]  = { "st", "-e", "sh", "-c", "~/scripts/open_notes.sh", NULL };
 static const char *firefoxcmd[]  = { "firefox", NULL };
 static const char *spotifycmd[]  = { "spotify", NULL };
 
@@ -98,7 +97,6 @@ static Key keys[] = {
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
 	/* { MODKEY,                       XK_r,      spawn,          {.v = rangercmd } },*/
-	{ MODKEY|ShiftMask,             XK_t,      spawn,          {.v = todocmd } },
 	{ MODKEY,                       XK_w,      spawn,          {.v = firefoxcmd } },
 	{ MODKEY,                       XK_s,      spawn,          {.v = spotifycmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
@@ -126,16 +124,10 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_g,      togglegaps,     {0} },
 	{ MODKEY|Mod4Mask|ShiftMask,    XK_0,      defaultgaps,    {0} },
 	{ MODKEY,                       XK_Tab,    view,           {0} },
-	{ MOD2KEY,                      XK_Tab,    swapfocus,      {0} },
 	{ MODKEY|ShiftMask,             XK_c,      killclient,     {0} },
-	{ MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} },
 	{ MODKEY,                       XK_y,      setlayout,      {.v = &layouts[1]} },
 	{ MODKEY|ShiftMask,             XK_s,      setlayout,      {.v = &layouts[2]} },
 	{ MODKEY,                       XK_f,      fullscreen,     {0} },
-	{ MODKEY|ShiftMask,             XK_l,      viewtoright,    {0} },
-	{ MODKEY,                       XK_l,      tagtoright,     {0} },
-	{ MODKEY|ShiftMask,             XK_h,      viewtoleft,     {0} },
-	{ MODKEY,                       XK_h,      tagtoleft,      {0} },
 	{ MODKEY,                       XK_space,  setlayout,      {0} },
 	{ MODKEY|ShiftMask,             XK_space,  togglefloating, {0} },
 	{ MODKEY,                       XK_0,      view,           {.ui = ~0 } },
